@@ -18,6 +18,7 @@ for wtype in WORD_TYPES:
     with open(os.path.join(_base_path, '%s.txt' % wtype), 'r') as f:
         WORDS_BY_TYPE[wtype] = [w.strip() for w in f.readlines()]
 
+
 def bytes_to_int(b1, b2, b3, b4):
     return (b1 << 24) | (b2 << 16) | (b3 << 8) | b4
 
