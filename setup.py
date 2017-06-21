@@ -3,7 +3,7 @@ setup(
   name = 'tripphrase',
   packages = ['tripphrase'],
   package_data={'tripphrase': ['*.txt']},
-  version = '0.3',
+  version = '0.4',
   description = 'An implementation of Bret Victor\'s tripphrases',
   author = 'Ryan "Lanny" Jenkins',
   author_email = 'lan.rogers.book@gmail.com',
