@@ -24,12 +24,12 @@ def bytes_to_int(b1, b2, b3, b4):
 
 def get_slots(input_str):
     # Turn unicode into a byte string if that's what we got.
-    if isinstance(input_str, unicode):
+    if isinstance(input_str, str):
         input_str = input_str.encode('UTF-8')
 
     md5 = hashlib.md5()
     md5.update(input_str)
-    digest = [ord(b) for b in md5.digest()]
+    digest = md5.digest()
 
     return (
         bytes_to_int(*digest[0:4]),
@@ -52,5 +52,5 @@ def tripphrase(input_str):
 
 if __name__ == '__main__':
     import sys
-    print tripphrase(sys.argv[1])
+    print(tripphrase(sys.argv[1]))
     sys.exit(0)
